@@ -1,0 +1,25 @@
+import main.*
+import personas.*
+import patova.*
+import pistas.*
+import dj.*
+
+test "cuando gonza baila en mainRoom" {
+	gonzen.bailarEn(mainRoom)
+	assert.equals(50, gonzen.energia())
+	assert.equals(45, gonzen.nivelDeDiversion())
+}
+
+test "cuando en panorama bar esta dixson de dj y bianker baila" {
+	panoramaBar.djDeHoy(dixon)
+	bianker.bailarEn(panoramaBar)
+	assert.equals(80, bianker.energia())
+	assert.equals(200, bianker.nivelDeDiversion())
+}
+
+test "cuando en panorama bar esta marcelDettmann y vonLukaz baila" {
+	panoramaBar.djDeHoy(marcelDettman)
+	vonLukaz.bailarEn(panoramaBar)
+	assert.equals(0, vonLukaz.energia())
+	assert.equals(1070, vonLukaz.nivelDeDiversion())
+}
